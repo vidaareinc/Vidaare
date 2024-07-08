@@ -12,10 +12,10 @@ export default function Landing() {
         <Header />
         <div
           className="w-max-[750px] w-min-[400px] h-max-[450px] flex flex-col ml-[75px] 
-        my-32 xl:my-40 "
+        my-28 xs:my-40 xl:my-24"
         >
           <hr className="w-24 border-8 mb-4" />
-          <h1 className="text-[30px] md:text-[40px] lg:text-[50px] xl:text-[70px] font-bold text-white">
+          <h1 className="text-[30px] md:text-[40px] lg:text-[50px] xl:text-[65px] font-bold text-white">
             Amplify your content,
             <br /> maximize your reach
           </h1>
