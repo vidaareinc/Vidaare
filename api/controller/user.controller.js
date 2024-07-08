@@ -13,4 +13,9 @@ const getEmails = async (res, req) => {
   try {
     const user = await User.find({});
     res.status(200).json(user);
-  } catch (err
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+module.exports = { createEmail, getEmails };
