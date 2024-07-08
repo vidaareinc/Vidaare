@@ -9,18 +9,18 @@ import Footer from "../components/footer/Footer";
 export default function Landing() {
   return (
     <>
-      <div className=" w-screen h-auto bg-landing-bg bg-cover bg-center p-8">
+      <div className=" w-screen h-[70vh] bg-landing-bg bg-cover bg-center p-8">
         <Header />
         <div
           className="w-max-[750px] w-min-[400px] h-max-[450px] flex flex-col ml-[75px] 
-        my-32 "
+        my-32 xl:my-40 "
         >
           <hr className="w-24 border-8 mb-4" />
-          <h1 className="text-[30px] md:text-[40px] lg:text-[50px] xl:text-[60px] font-bold text-white">
+          <h1 className="text-[30px] md:text-[40px] lg:text-[50px] xl:text-[70px] font-bold text-white">
             Amplify your content,
             <br /> maximize your reach
           </h1>
-          <p className="text-[12px] md:text-[14px] lg:text-[16px] text-white mt-4 md:mt-6 lg:mt-8">
+          <p className="sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[22px] text-white mt-4 md:mt-6 lg:mt-8">
             Schedule, track and post your videos across all platforms in one
             place, and watch your content royalty grow!
           </p>
