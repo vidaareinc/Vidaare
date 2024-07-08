@@ -3,10 +3,6 @@ import "../../styles/styles.css";
 
 export default function Header() {
   return (
-    // <div className="flex flex-row justify-between items-center p-6">
-    //   <h1 className="text-3xl text-white logo uppercase">Vidaare</h1>
-    //   <button className=" text-white p-4 rounded-lg border-2 border-white mr-8 hidden sm:block hover:text-slate-500">
-    //     Let's Get Started
     <div className="flex flex-row justify-between items-center p-4 md:p-8">
       <h1 className="text-2xl md:text-3xl text-white logo uppercase">
         Vidaare

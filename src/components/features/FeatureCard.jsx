@@ -1,21 +1,5 @@
 const FeatureCard = ({ title, description, imageUrl, link }) => {
   return (
-    //     <div className="max-w-lg rounded overflow-hidden shadow-lg">
-    //       <div className="m-6">
-    //         <img className="w-[450px] h-[350px]" src={imageUrl} alt={title} />
-
-    //         <div className="font-bold text-xl my-4">{title}</div>
-    //         <p className="text-gray-700 text-base mb-8">{description}</p>
-    //         <div className="flex justify-end">
-    //           <button className=" text-blue-500 underline  hover:text-blue-300">
-    //             {link}
-    //           </button>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   );
-    // };
-
     <div className="max-w-sm rounded overflow-hidden shadow-lg">
       <div className="h-[350px] overflow-hidden">
         <img
@@ -28,7 +12,9 @@ const FeatureCard = ({ title, description, imageUrl, link }) => {
         <div className="font-bold text-xl mb-2">{title}</div>
         <p className="text-gray-700 text-base">{description}</p>
         <div className="mt-4 text-right">
-          <button className="text-blue-500 underline">{link}</button>
+          <button className="text-blue-500 underline hover:text-blue-300">
+            {link}
+          </button>
         </div>
       </div>
     </div>
