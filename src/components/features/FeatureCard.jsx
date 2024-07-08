@@ -7,7 +7,9 @@ const FeatureCard = ({ title, description, imageUrl, link }) => {
         <div className="font-bold text-xl my-4">{title}</div>
         <p className="text-gray-700 text-base mb-8">{description}</p>
         <div className="flex justify-end">
-          <button className=" text-blue-500 underline">{link}</button>
+          <button className=" text-blue-500 underline  hover:text-blue-300">
+            {link}
+          </button>
         </div>
       </div>
     </div>

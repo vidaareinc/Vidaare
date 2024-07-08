@@ -5,7 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         "landing-bg":
-          "url('/src/assets/images/LandingPage/LandingPage_BG.png')",
+          "url('/src/assets/images/LandingPage/LandingPage_BG2.png')",
       },
     },
   },

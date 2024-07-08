@@ -9,25 +9,29 @@ import Footer from "../components/footer/Footer";
 export default function Landing() {
   return (
     <>
-      <div className=" w-screen h-screen bg-landing-bg bg-cover bg-center">
+      <div className=" w-screen h-auto bg-landing-bg bg-cover bg-center p-8">
         <Header />
-        <div className="w-[750px] h-[450px] flex flex-col ml-[75px] mt-52">
-          <h1 className="text-[70px] font-bold text-white">
+        <div
+          className="w-max-[750px] w-min-[400px] h-max-[450px] flex flex-col ml-[75px] 
+        my-32 "
+        >
+          <hr className="w-24 border-8 mb-4" />
+          <h1 className="text-[30px] md:text-[40px] lg:text-[50px] xl:text-[60px] font-bold text-white">
             Amplify your content,
             <br /> maximize your reach
           </h1>
-          <p className="text-[18px] text-white mt-8">
+          <p className="text-[12px] md:text-[14px] lg:text-[16px] text-white mt-4 md:mt-6 lg:mt-8">
             Schedule, track and post your videos across all platforms in one
             place, and watch your content royalty grow!
           </p>
-          <button className="bg-white-500 text-white px-5 py-3 rounded border border-white w-[150px] mt-8">
+          <button className=" text-white px-4 py-2 md:px-5 md:py-3 rounded-lg border border-white w-[120px]  hover:text-slate-500 md:w-[150px] mt-4 md:mt-6 lg:mt-8">
             Learn More
           </button>
         </div>
       </div>
-      <div className=" px-24 font-bold mt-10">
-        <h1 className="text-[40px]">Features</h1>
-        <div className="flex-wrap flex flex-row gap-4 justify-evenly mt-8">
+      <div className=" px-4 md:px-12 lg:px-24 font-bold mt-8 md:mt-10">
+        <h1 className="text-[30px] md:text-[35px] lg:text-[40px]">Features</h1>
+        <div className="flex flex-wrap justify-evenly mt-6 ">
           <FeatureCard
             title="Go Live from One Platform"
             description="Seamlessly broadcast live across multiple social media platforms"
