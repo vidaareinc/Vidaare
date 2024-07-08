@@ -1,12 +1,13 @@
-import React from "react";
 import "../../styles/styles.css";
 
 export default function Header() {
   return (
-    <div className="flex flex-row justify-between items-center p-6">
-      <h1 className="text-3xl text-white logo uppercase">Vidaare</h1>
-      <button className=" text-white p-4 rounded-lg border-2 border-white mr-8 hidden sm:block hover:text-slate-500">
-        Let's Get Started
+    <div className="flex flex-row justify-between items-center p-4 md:p-8">
+      <h1 className="text-2xl md:text-3xl text-white font-inknut-antiqua logo uppercase">
+        Vidaare
+      </h1>
+      <button className="bg-transparent text-white me-8 px-4 py-2 rounded border border-white">
+        Let&apos;s Get Started
       </button>
       <svg
         xmlns="http://www.w3.org/2000/svg"
