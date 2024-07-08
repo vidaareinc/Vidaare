@@ -1,11 +1,8 @@
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 export default function Layout({ children }) {
-  return (
-    <div className=" ">
-      {children}
-    </div>
-  );
+  return <div className=" ">{children}</div>;
 }
 
 Layout.propTypes = {
