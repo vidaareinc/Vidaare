@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../components/header/Header";
 import FeatureCard from "../components/features/FeatureCard";
 import Feature1 from "../assets/images/LandingPage/LandingPage_Feature1.png";
@@ -9,7 +8,7 @@ import Footer from "../components/footer/Footer";
 export default function Landing() {
   return (
     <>
-      <div className=" w-screen h-[70vh] bg-landing-bg bg-cover bg-center p-8">
+      <div className="w-screen h-screen bg-landing-bg bg-cover bg-center flex flex-col justify-between">
         <Header />
 
         <div className="container mx-auto px-4 md:px-8 lg:px-16 py-12 flex flex-col items-start text-white my-28 sm:my-40 xl:my-24">

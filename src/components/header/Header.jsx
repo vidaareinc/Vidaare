@@ -1,7 +1,13 @@
-import React from "react";
+import { useState } from "react";
 import "../../styles/styles.css";
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className="flex flex-row justify-between items-center p-4 md:p-8">
       <h1 className="text-2xl md:text-3xl text-white logo uppercase">

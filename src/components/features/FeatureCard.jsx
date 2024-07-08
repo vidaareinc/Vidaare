@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const FeatureCard = ({ title, description, imageUrl, link }) => {
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg">
