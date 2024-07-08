@@ -3,12 +3,12 @@ import "../../styles/styles.css";
 
 export default function Header() {
   return (
-    <div className="flex flex-row justify-between items-center p-8">
-      <h1 className="text-3xl text-white font-inknut-antiqua logo uppercase">
+    <div className="flex flex-row justify-between items-center p-4 md:p-8">
+      <h1 className="text-2xl md:text-3xl text-white font-inknut-antiqua logo uppercase">
         Vidaare
       </h1>
-      <button className="bg-white-500 text-white p-4 rounded border border-white mr-8">
-        Let's Get Started
+      <button className="bg-transparent text-white px-4 py-2 rounded border border-white">
+        Let&apos;s Get Started
       </button>
     </div>
   );
