@@ -1,17 +1,20 @@
+import { useState } from "react";
 import Header from "../components/header/Header";
 import FeatureCard from "../components/features/FeatureCard";
 import Feature1 from "../assets/images/LandingPage/LandingPage_Feature1.png";
 import Feature2 from "../assets/images/LandingPage/LandingPage_Feature2.png";
 import Feature3 from "../assets/images/LandingPage/LandingPage_Feature3.png";
 import Footer from "../components/footer/Footer";
+import EmailModal from "../components/modals/EmailModal";
 
 export default function Landing() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
       <div className="w-screen h-screen bg-landing-bg bg-cover bg-center flex flex-col justify-between">
         <Header />
 
-        <div className="container mx-auto px-4 md:px-8 lg:px-16 py-12 flex flex-col items-start text-white my-28 sm:my-40 xl:my-24">
+        <div className="container mx-auto my-96 px-4 md:px-8 lg:px-16 flex flex-col items-start text-white ">
           <hr className="w-24 border-8 mb-4 sm:w-18 " />
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
             Amplify your content,
@@ -21,9 +24,16 @@ export default function Landing() {
             Schedule, track and post your videos across all platforms in one
             place, and watch your content royalty grow!
           </p>
-          <button className="bg-transparent text-white mt-8 px-4 py-2 rounded border border-white hover:text-slate-500 md:w-[150px] md:mt-6 lg:mt-8">
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="bg-transparent text-white mt-8 px-4 py-2 rounded border border-white hover:text-slate-500 md:w-[150px] md:mt-6 lg:mt-8"
+          >
             Learn More
           </button>
+          <EmailModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+          />
         </div>
       </div>
       <div className="container mx-auto px-4 md:px-8 lg:px-16 py-12 font-bold">
