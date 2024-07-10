@@ -1,9 +1,11 @@
 import { useState } from "react";
 // import { Link } from "react-router-dom";
 import "../../styles/styles.css";
+import EmailModal from "../modals/EmailModal";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -29,9 +31,13 @@ export default function Header() {
           d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
         />
       </svg>
-      <button className="bg-transparent text-white me-8 px-4 py-2 rounded border border-white hidden sm:block hover:text-slate-500">
+      <button
+        className="bg-transparent text-white me-8 px-4 py-2 rounded border border-white hidden sm:block hover:text-slate-500"
+        onClick={() => setIsModalOpen(true)}
+      >
         Let&apos;s Get Started
       </button>
+      <EmailModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       {menuOpen && (
         <div className="absolute top-full right-0 mt-2 w-48 bg-transparent text-black rounded-md shadow-lg z-50 sm:hidden">
           {/* <Link href="#" className="block px-4 py-2 hover:bg-gray-200">
