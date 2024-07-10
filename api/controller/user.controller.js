@@ -29,8 +29,8 @@ const createEmail = async (req, res) => {
 
 const getEmails = async (req, res) => {
   try {
-    const users = await User.find({});
-    res.status(200).json(users);
+    const user = await User.find({});
+    res.status(200).json(user);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
