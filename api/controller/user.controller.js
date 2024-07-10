@@ -31,7 +31,7 @@ const createEmail = async (req, res) => {
   }
 };
 
-const getEmails = async (res, req) => {
+const getEmails = async (req, res) => {
   try {
     const user = await User.find({});
     res.status(200).json(user);
