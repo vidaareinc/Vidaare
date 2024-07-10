@@ -38,7 +38,8 @@ export default function Landing() {
       </div>
       <div className="container mx-auto px-4 md:px-8 lg:px-16 py-12 font-bold">
         <h1 className="text-3xl md:text-4xl">Features</h1>
-        <div className="flex flex-col md:flex-row md:flex-wrap justify-center md:justify-evenly gap-8 mt-8">
+        {/* <div className="flex flex-col md:flex-row md:flex-wrap justify-center md:justify-evenly gap-8 mt-8"> */}
+        <div className="flex flex-col items-center md:flex-row md:flex-wrap md:justify-evenly gap-8 mt-8">
           <FeatureCard
             title="Go Live from One Platform"
             description="Seamlessly broadcast live across multiple social media platforms"
