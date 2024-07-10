@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "../../styles/styles.css";
 
 export default function Header() {
@@ -33,15 +33,15 @@ export default function Header() {
         Let&apos;s Get Started
       </button>
       {menuOpen && (
-        <div className="absolute top-full right-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg z-50 sm:hidden">
-          <Link href="#" className="block px-4 py-2 hover:bg-gray-200">
+        <div className="absolute top-full right-0 mt-2 w-48 bg-transparent text-black rounded-md shadow-lg z-50 sm:hidden">
+          {/* <Link href="#" className="block px-4 py-2 hover:bg-gray-200">
             Home
           </Link>
           <Link className="block px-4 py-2 hover:bg-gray-200">About</Link>
           <Link className="block px-4 py-2 hover:bg-gray-200">Services</Link>
           <Link href="#" className="block px-4 py-2 hover:bg-gray-200">
             Contact
-          </Link>
+          </Link> */}
         </div>
       )}
     </div>

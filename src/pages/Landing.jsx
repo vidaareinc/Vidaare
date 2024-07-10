@@ -14,7 +14,7 @@ export default function Landing() {
       <div className="w-screen h-screen bg-landing-bg bg-cover bg-center flex flex-col justify-between">
         <Header />
 
-        <div className="container mx-auto my-96 px-4 md:px-8 lg:px-16 flex flex-col items-start text-white ">
+        <div className="container mx-auto px-4 md:px-8 lg:px-16 flex flex-col justify-center items-start text-white h-screen ">
           <hr className="w-24 border-8 mb-4 sm:w-18 " />
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
             Amplify your content,
