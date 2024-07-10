@@ -14,6 +14,7 @@ const createEmail = async (req, res) => {
   if (!email) {
     return res.status(400).json({ message: "Email is required" });
   }
+
   try {
     // Create a new user with the provided email
     const newUser = await User.create({ email });
@@ -32,8 +33,8 @@ const createEmail = async (req, res) => {
 
 const getEmails = async (req, res) => {
   try {
-    const users = await User.find({});
-    res.status(200).json(users);
+    const user = await User.find({});
+    res.status(200).json(user);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
