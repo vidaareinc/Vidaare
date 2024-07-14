@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const FeatureCard = ({ title, description, imageUrl, link }) => {
+const FeatureCard = ({ title, description, imageUrl, onClick }) => {
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg">
       <div className="h-[350px] overflow-hidden">
@@ -14,8 +14,11 @@ const FeatureCard = ({ title, description, imageUrl, link }) => {
         <div className="font-bold text-xl mb-2">{title}</div>
         <p className="text-gray-700 text-base">{description}</p>
         <div className="mt-4 text-right">
-          <button className="text-blue-500 underline hover:text-blue-300">
-            {link}
+          <button
+            className="text-blue-500 underline hover:text-blue-300"
+            onClick={onClick}
+          >
+            Read More
           </button>
         </div>
       </div>
@@ -27,7 +30,7 @@ FeatureCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default FeatureCard;
