@@ -3,3 +3,8 @@
 .logo {
   font-family: "Inknut Antiqua", serif;
 }
+
+/* Dashboard */
+.layout-bg {
+  background: linear-gradient(to bottom left, #00bfff 20%, #0a2540 50%);
+}

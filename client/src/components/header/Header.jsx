@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import { Link } from "react-router-dom";
 import "../../styles/styles.css";
 import EmailModal from "../modals/EmailModal";
 import { Link } from "react-router-dom";
@@ -17,6 +16,9 @@ export default function Header() {
       <h1 className="text-2xl md:text-3xl text-white logo uppercase">
         Vidaare
       </h1>
+      <Link to="/dashboard" className="text-xl text-white">
+        Dashboard
+      </Link>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
