@@ -21,23 +21,27 @@ export default function MainHeader() {
               <h1 className="text-lg font-bold text-white">Dashboard</h1>
             </div>
             <div>
+              {/* TODO: Retrieve Username and Replace "user" with actual name from DB */}
               <h1 className="text-white text-base">
                 Good Afternoon Jane, Welcome to Vidaare
               </h1>
             </div>
-            {/* Replace "User" with actual user's name */}
           </div>
           {/* Search bar */}
           <div className="flex justify-between items-center">
             <div className="flex flex-row relative">
+              {/* TODO: Add Handle submit */}
               <MagnifyingGlassIcon className="w-6 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+              {/* TODO: Implement Search results */}
               <input
                 type="text"
                 placeholder="&nbsp; &nbsp; &nbsp; Type Here..."
                 className="border border-gray-300 px-3 py-2 rounded-lg focus:outline-none mr-8"
               />
             </div>
+            {/* TODO: Add Settings Page */}
             <Cog6ToothIcon className="w-6 mr-8" />
+            {/* TODO: Add Notifications */}
             <BellIcon className="w-6 mr-8" />
           </div>
         </div>

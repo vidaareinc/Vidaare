@@ -4,7 +4,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/solid";
 
 export default function VidCreate() {
   return (
-    <div className="w-[25%] h-96 vid-bg rounded-xl flex flex-col justify-between">
+    <div className="w-1/4 h-96 vid-bg rounded-xl flex flex-col justify-between">
       <div>
         <h1 className="text-2xl text-white mx-8 mt-8">Welcome Back!</h1>
         <p className="text-white text-xl mx-8">Nice to see you, Jane Doe!</p>

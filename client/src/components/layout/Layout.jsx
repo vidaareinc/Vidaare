@@ -4,10 +4,11 @@ import "../../styles/styles.css";
 
 import Navbar from "../navigation/Navbar";
 import MainHeader from "../header/MainHeader";
-import Footer from "../footer/Footer";
+import MainFooter from "../footer/MainFooter";
 
 export default function Layout({ children }) {
   return (
+    // FIXME: Modify the background lineaer gradient color
     <div className="flex min-h-screen main-bg layout-bg p-4">
       <Navbar />
 
@@ -18,7 +19,7 @@ export default function Layout({ children }) {
         <main className="container mx-auto px-4 py-4">{children}</main>
 
         {/* Footer */}
-        <Footer />
+        <MainFooter />
       </div>
     </div>
   );

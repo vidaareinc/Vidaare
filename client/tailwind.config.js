@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       background: {
-        "main-bg": "linear-gradient(to bottom left, #00bfff 20%, #0a2540 50%)",
+        "main-bg":
+          "linear-gradient(45deg, rgba(10,37,64,1) 10%, rgba(0,191,255,1) 90%)",
       },
       backgroundImage: {
         "landing-bg":
@@ -17,7 +18,7 @@ export default {
       addUtilities({
         ".main-bg": {
           background:
-            "linear-gradient(to bottom left, #00bfff 20%, #0a2540 50%)",
+            "linear-gradient(45deg, rgba(10,37,64,1) 10%, rgba(0,191,255,1) 90%)",
         },
       });
     },

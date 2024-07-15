@@ -11,6 +11,10 @@ import TwitchQuicklinks from "../../assets/images/Main/Twitch_quicklinks.png";
 import { Link } from "react-router-dom";
 import { PencilIcon } from "@heroicons/react/24/solid";
 
+/**
+ * TO Discuss: How the Quick Links works
+ */
+
 const socialMediaLinks = [
   {
     name: "Facebook",
@@ -56,18 +60,19 @@ export default function QuickLinks() {
           />
           <PencilIcon className="absolute bottom-0 right-8 w-7 h-7 rounded-lg bg-black text-white p-2" />
         </div>
+        {/* TODO: Retrieve Users Name and Email */}
         <div className="flex flex-col">
           <h6 className="text-lg text-white mb-2">Jane Doe</h6>
           <h6 className="text-lg text-slate-500">jane.doe@octopus.com</h6>
         </div>
       </div>
+      {/* TODO: Implement feature weather social media platform is logged in */}
       <div className="px-4 py-6 mx-6 w-auto rounded-lg bg-[#0a2540] flex flex-row justify-center items-center">
         {socialMediaLinks.map((link) => (
           <Link
             key={link.name}
             href={link.url}
             target="_blank"
-            rel="noopener noreferrer"
             className="mx-8"
           >
             <img src={link.imagePath} alt={link.name} className="w-24 h-auto" />

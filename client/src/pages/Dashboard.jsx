@@ -3,6 +3,8 @@ import QuickLinks from "../components/quicklinks/QuickLinks";
 import VidCreate from "../components/vidcreate/VidCreate";
 import SocialMediaStats from "../components/stats/SocialMediaStats";
 import ProfileInfo from "../components/profile/ProfileInfo";
+import PlatformSettings from "../components/settings/PlatformSettings";
+import VideoGarage from "../components/quicklinks/VideoGarage";
 
 export default function Dashboard() {
   return (
@@ -13,8 +15,10 @@ export default function Dashboard() {
         <SocialMediaStats />
         <ProfileInfo />
       </div>
-      <h1>Platform Settings</h1>
-      <h1>Video Garage</h1>
+      <div className="flex flex-row w-full mt-8 gap-8 ">
+        <PlatformSettings />
+        <VideoGarage />
+      </div>
     </div>
   );
 }

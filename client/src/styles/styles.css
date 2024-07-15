@@ -23,6 +23,11 @@
   );
 }
 
+.navlogo-bg {
+  background-image: url("../assets/images/Main/NavLogo.png");
+  background-position: center;
+  background-size: cover;
+}
 /* Quick Links */
 .quicklinks-bg {
   background: linear-gradient(

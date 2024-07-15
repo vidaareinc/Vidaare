@@ -6,6 +6,7 @@ import {
   CalendarIcon,
   UserIcon,
   ChartBarIcon,
+  ArrowRightEndOnRectangleIcon,
 } from "@heroicons/react/24/solid";
 import "../../styles/styles.css";
 
@@ -20,7 +21,7 @@ export default function Navbar() {
         </h1>
         <hr className="mb-8" />
         <Link
-          href="#"
+          to="/dashboard"
           className="flex items-center justify-start p-4 m-4 text-gray-300 text-base hover:text-white"
         >
           <HomeIcon className="w-6 mr-8" />
@@ -29,7 +30,7 @@ export default function Navbar() {
 
         {/* My Videos Link */}
         <Link
-          href="#"
+          to="/myvideos"
           className="flex items-center justify-self p-4 m-4 text-gray-300 text-base hover:text-white"
         >
           <VideoCameraIcon className="w-6 mr-8" />
@@ -39,7 +40,7 @@ export default function Navbar() {
         {/* Analytics Link */}
 
         <Link
-          href="#"
+          to="/analytics"
           className="flex items-center justify-start p-4 m-4 text-gray-300 text-base hover:text-white"
         >
           <ChartBarIcon className="w-6 mr-8" />
@@ -48,7 +49,7 @@ export default function Navbar() {
 
         {/* Book Link Demo Link */}
         <Link
-          href="#"
+          to="/demo"
           className="flex items-center justify-start p-4 m-4 text-gray-300 text-base hover:text-white"
         >
           <CalendarIcon className="w-6 mr-8" />
@@ -66,6 +67,28 @@ export default function Navbar() {
           <UserIcon className="w-6 mr-8" />
           My Profile
         </Link>
+
+        {/* Logout Button */}
+        <div className="absolute bottom-0 w-[80%]">
+          <hr className="mb-8" />
+          <Link
+            to="/logout"
+            className="flex items-center justify-start p-4 m-4 text-gray-300 text-base hover:text-white"
+          >
+            <ArrowRightEndOnRectangleIcon className="w-6 mr-8" />
+            Logout
+          </Link>
+
+          {/* Company Details */}
+          <div className="w-full h-40 rounded-lg navlogo-bg flex flex-col ">
+            <h1 className="text-white text-xl ml-2 mt-8 font-bold">
+              Need Help?
+            </h1>
+            <h2 className="text-white ml-2 font-semibold">
+              Email us at: Vidaare@gmail.com
+            </h2>
+          </div>
+        </div>
       </div>
     </>
   );
