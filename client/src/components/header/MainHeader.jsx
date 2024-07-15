@@ -9,17 +9,21 @@ export default function MainHeader() {
   return (
     <>
       {/* Header */}
-      <header className="bg-transparent shadow sticky top-0 z-10">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center flex-row">
+      <header className="bg-transparent sticky top-0 z-10 ">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center flex-row ">
           <div className="flex flex-col">
             <div className="flex flex-row">
-              <h1 className="text-lg font-bold uppercase mr-4">vidaare</h1>{" "}
-              <h1 className="text-lg font-bold uppercase mr-4">/</h1>
+              <h1 className="text-lg font-bold uppercase mr-4 text-white">
+                vidaare
+              </h1>{" "}
+              <h1 className="text-lg font-bold uppercase mr-4 text-white">/</h1>
               {/* Page Screen Name */}
-              <h1 className="text-lg font-bold ">Dashboard</h1>
+              <h1 className="text-lg font-bold text-white">Dashboard</h1>
             </div>
             <div>
-              <h1>Good Afternoon Jane, Welcome to Vidaare</h1>
+              <h1 className="text-white text-base">
+                Good Afternoon Jane, Welcome to Vidaare
+              </h1>
             </div>
             {/* Replace "User" with actual user's name */}
           </div>

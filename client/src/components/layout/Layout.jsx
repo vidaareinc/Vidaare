@@ -8,7 +8,7 @@ import Footer from "../footer/Footer";
 
 export default function Layout({ children }) {
   return (
-    <div className="flex min-h-screen main-bg">
+    <div className="flex min-h-screen main-bg layout-bg p-4">
       <Navbar />
 
       {/* Main content Section */}
