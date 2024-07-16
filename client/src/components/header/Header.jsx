@@ -1,7 +1,7 @@
 import { useState } from "react";
-// import { Link } from "react-router-dom";
 import "../../styles/styles.css";
 import EmailModal from "../modals/EmailModal";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,6 +16,9 @@ export default function Header() {
       <h1 className="text-2xl md:text-3xl text-white logo uppercase">
         Vidaare
       </h1>
+      <Link to="/dashboard" className="text-xl text-white">
+        Dashboard
+      </Link>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -39,15 +42,14 @@ export default function Header() {
       </button>
       <EmailModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       {menuOpen && (
-        <div className="absolute top-full right-0 mt-2 w-48 bg-transparent text-black rounded-md shadow-lg z-50 sm:hidden">
-          {/* <Link href="#" className="block px-4 py-2 hover:bg-gray-200">
-            Home
+        <div className="absolute top-full right-2 mt-2 w-48 h-48 rounded-lg text-white shadow-lg backdrop-filter backdrop-blur-lg bg-opacity-80 z-50 sm:hidden">
+          <Link
+            onClick={() => setIsModalOpen(true)}
+            className="block px-4 py-2 hover:bg-gray-200"
+          >
+            Let&apos;s Get Started
           </Link>
-          <Link className="block px-4 py-2 hover:bg-gray-200">About</Link>
-          <Link className="block px-4 py-2 hover:bg-gray-200">Services</Link>
-          <Link href="#" className="block px-4 py-2 hover:bg-gray-200">
-            Contact
-          </Link> */}
+          <hr className="w-full" />
         </div>
       )}
     </div>
