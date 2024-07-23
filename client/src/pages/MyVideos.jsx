@@ -1,42 +1,38 @@
 import React, { useState } from "react";
-import MyRecentlyPlayed from "../components/videos/MyRecentlyPlayed";
+// import MyRecentlyPlayed from "../components/videos/MyRecentlyPlayed";
 import MyVideoList from "../components/videos/MyVideoList";
+import MyRecentlyPlayedList from "../components/videos/MyRecentlyPlayedList";
+// import Ex1 from "../assets/videos/Ex1.mp4";
 
 export default function MyVideos() {
-  const [filter, setFilter] = useState("all");
+  const [currentVideo, setCurrentVideo] = useState("");
 
-  const filters = [
-    "all",
-    "educational videos",
-    "entertaining videos",
-    "promotional videos",
-    "live streams",
-    "event/coverage videos",
-    "how-to/guide videos",
-    "personal/vlog videos",
-    "others",
-  ];
+  const handleVideoSelect = (videoSrc) => {
+    setCurrentVideo(videoSrc);
+  };
 
   return (
     <>
       <div className="flex flex-row justify-evenly w-full">
-        {filters.map((filterItem) => (
-          <h1
-            key={filterItem}
-            className={`text-sm cursor-pointer uppercase mr-4 text-white ${
-              filter === filterItem ? "font-bold" : ""
-            }`}
-            onClick={() => setFilter(filterItem)}
-          >
-            {filterItem}
-          </h1>
-        ))}
+        {/* Filters are removed */}
       </div>
       <div className="m-4">
-        <MyRecentlyPlayed filter={filter} />
+        <div className="container flex flex-row ">
+          <div className="p-2 w-7/12">
+            <video
+              src={currentVideo}
+              controls
+              className="rounded-lg shadow-lg w-full h-[475px]"
+            />
+          </div>
+
+          <div className="p-6 w-full md:w-5/12">
+            <MyRecentlyPlayedList onVideoSelect={handleVideoSelect} />
+          </div>
+        </div>
       </div>
       <div className="flex flex-wrap px-8">
-        <MyVideoList filter={filter} />
+        <MyVideoList onVideoSelect={setCurrentVideo} />
       </div>
     </>
   );
