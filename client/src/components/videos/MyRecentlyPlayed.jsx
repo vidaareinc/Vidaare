@@ -1,16 +1,16 @@
-import React from "react";
-import Ex1 from "../../assets/videos/Ex1.mp4";
+import React, { useState } from "react";
 import MyRecentlyPlayedList from "./MyRecentlyPlayedList";
 
 export default function MyRecentlyPlayed() {
+  const [currentVideo, setCurrentVideo] = useState("");
+
+  const handleVideoSelect = (videoSrc) => {
+    setCurrentVideo(videoSrc);
+  };
+
   return (
-    <div className="container flex flex-row p-8">
-      <div className="p-4">
-        <video src={Ex1} controls className="rounded-lg shadow-lg" />
-      </div>
-      <div className="p-4">
-        <MyRecentlyPlayedList />
-      </div>
+    <div className="p-6 w-full md:w-5/12">
+      <MyRecentlyPlayedList onVideoSelect={handleVideoSelect} />
     </div>
   );
 }
