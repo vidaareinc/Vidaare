@@ -44,7 +44,7 @@ export default function MyVideoCard({
         <div className="flex flex-row justify-between items-center">
           <p className="mt-2 font-medium">{videoDuration}</p>
           <button
-            className="mt-4 bg-transparent text-white px-4 py-2 rounded hover:bg-[#0a2540] transition duration-200"
+            className="mt-4 bg-transparent text-white px-4 py-2 rounded hover:underline hover:bg-[#0a2540] transition duration-200"
             onClick={() => alert("Share functionality to be implemented!")}
           >
             Share Now

@@ -40,9 +40,17 @@ export default function MainHeader() {
               />
             </div>
             {/* TODO: Add Settings Page */}
-            <Cog6ToothIcon className="w-6 mr-8" />
+            <Cog6ToothIcon
+              className="w-6 mr-8 cursor-pointer"
+              onClick={() => alert("Settings functionality to be implemented!")}
+            />
             {/* TODO: Add Notifications */}
-            <BellIcon className="w-6 mr-8" />
+            <BellIcon
+              className="w-6 mr-8 cursor-pointer"
+              onClick={() =>
+                alert("Notifications functionality to be implemented!")
+              }
+            />
           </div>
         </div>
       </header>

@@ -10,8 +10,11 @@ export default function VidCreate() {
         <p className="text-white text-xl mx-8">Nice to see you, Jane Doe!</p>
       </div>
       <div className="mb-8 mx-8">
-        <button className=" px-4 py-2 bg-transparent text-white rounded-lg flex flex-row justify-between gap-2 items-center">
-          Create Video <ArrowRightIcon className="w-5 h-auto" />
+        <button
+          className=" px-4 py-2 bg-transparent text-white rounded-lg flex flex-row justify-between gap-2 items-center cursor-pointer"
+          onClick={() => alert("Create Video Screen to be implemented!")}
+        >
+          Create Video <ArrowRightIcon className="w-5 h-auto cursor-pointer" />
         </button>
       </div>
     </div>
