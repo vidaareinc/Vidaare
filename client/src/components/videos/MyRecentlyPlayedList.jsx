@@ -1,41 +1,31 @@
 import React from "react";
 import MyRecentlyPlayedCard from "./MyRecentlyPlayedCard";
-import Ex1 from "../../assets/videos/Ex1.mp4";
-import Ex2 from "../../assets/videos/Ex2.mp4";
 import PropTypes from "prop-types";
+import { FunnelIcon } from "@heroicons/react/24/solid";
 
-const videos = [
-  {
-    id: 1,
-    videoSrc: Ex1,
-    title: "Video 1",
-    description: "This is the first example video.",
-  },
-  {
-    id: 2,
-    videoSrc: Ex2,
-    title: "Video 2",
-    description: "This is the second example video.",
-  },
-  {
-    id: 3,
-    videoSrc: Ex1,
-    title: "Video 1",
-    description: "This is the first example video.",
-  },
-  {
-    id: 4,
-    videoSrc: Ex2,
-    title: "Video 2",
-    description: "This is the second example video.",
-  },
-];
-
-// Pass The {Filter} props
-export default function MyRecentlyPlayedList({ onVideoSelect }) {
+export default function MyRecentlyPlayedList({
+  recentlyPlayed,
+  onVideoSelect,
+  onClear,
+}) {
   return (
     <div className="flex flex-col gap-y-2 h-[450px] overflow-y-auto w-full justify-evenly">
-      {videos.map((video) => (
+      <div className="flex justify-between items-center mb-2 px-4">
+        <h2 className="text-lg font-bold">Recently Played</h2>
+        <div className="flex items-center">
+          <FunnelIcon
+            className="w-6 mr-4 cursor-pointer"
+            onClick={() => alert("Filtering functionality to be implemented!")}
+          />
+          <button
+            onClick={onClear}
+            className="p-2 rounded-lg text-sm hover:bg-[#0a2540] transition duration-200 hover:underline"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+      {recentlyPlayed.map((video) => (
         <MyRecentlyPlayedCard
           key={video.id}
           videoSrc={video.videoSrc}
@@ -49,5 +39,7 @@ export default function MyRecentlyPlayedList({ onVideoSelect }) {
 }
 
 MyRecentlyPlayedList.propTypes = {
+  recentlyPlayed: PropTypes.array.isRequired,
   onVideoSelect: PropTypes.func.isRequired,
+  onClear: PropTypes.func.isRequired,
 };

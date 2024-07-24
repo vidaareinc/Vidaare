@@ -9,7 +9,7 @@ import LinkedInQuicklinks from "../../assets/images/Main/LinkedIn_quicklinks.png
 import YTQuicklinks from "../../assets/images/Main/YT_quicklinks.png";
 import TwitchQuicklinks from "../../assets/images/Main/Twitch_quicklinks.png";
 import { Link } from "react-router-dom";
-import { PencilIcon } from "@heroicons/react/24/solid";
+import { CheckCircleIcon, PencilIcon } from "@heroicons/react/24/solid";
 
 /**
  * TO Discuss: How the Quick Links works
@@ -58,7 +58,12 @@ export default function QuickLinks() {
             src={Avatar}
             alt="Avatar"
           />
-          <PencilIcon className="absolute bottom-0 right-8 w-7 h-7 rounded-lg bg-black text-white p-2" />
+          <PencilIcon
+            className="absolute bottom-0 right-8 w-7 h-7 rounded-lg bg-black text-white p-2 cursor-pointer"
+            onClick={() =>
+              alert("Image change functionality to be implemented!")
+            }
+          />
         </div>
         {/* TODO: Retrieve Users Name and Email */}
         <div className="flex flex-col">
@@ -73,7 +78,7 @@ export default function QuickLinks() {
             key={link.name}
             href={link.url}
             target="_blank"
-            className="mx-8"
+            className="mx-8 cursor-pointer"
           >
             <img src={link.imagePath} alt={link.name} className="w-24 h-auto" />
           </Link>

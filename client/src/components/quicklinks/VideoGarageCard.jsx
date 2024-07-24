@@ -21,7 +21,9 @@ export default function VideoGarageCard({
       <div className="mt-4 ">
         <button
           className="text-white border text-base rounded-lg border-slate-500 hover:text-slate-500 p-2"
-          onClick={onClick}
+          onClick={() =>
+            alert("Another Screen functionality to be implemented!")
+          }
         >
           View All
         </button>
