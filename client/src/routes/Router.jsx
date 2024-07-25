@@ -6,6 +6,7 @@ import Dashboard from "../pages/Dashboard";
 import MyVideos from "../pages/MyVideos";
 import Analytics from "../pages/Analytics";
 import Demo from "../pages/Demo";
+import CreatePost from "../pages/CreatePost";
 
 export default function Router() {
   return (
@@ -40,6 +41,14 @@ export default function Router() {
         element={
           <Layout>
             <Demo />
+          </Layout>
+        }
+      />
+      <Route
+        path="/createpost"
+        element={
+          <Layout>
+            <CreatePost />
           </Layout>
         }
       />
