@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { Player, ControlBar, BigPlayButton } from "video-react";
 import "video-react/dist/video-react.css";
 
@@ -43,12 +44,13 @@ export default function MyVideoCard({
         <p className="mt-2 text-white">{description}</p>
         <div className="flex flex-row justify-between items-center">
           <p className="mt-2 font-medium">{videoDuration}</p>
-          <button
+          <Link
             className="mt-4 bg-transparent text-white px-4 py-2 rounded hover:underline hover:bg-[#0a2540] transition duration-200"
             onClick={() => alert("Share functionality to be implemented!")}
+            // to="/createpost"
           >
             Share Now
-          </button>
+          </Link>
         </div>
       </div>
     </div>

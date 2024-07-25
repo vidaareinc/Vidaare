@@ -12,7 +12,7 @@ export default function MyRecentlyPlayedList({
     <div className="flex flex-col gap-y-2 h-[450px] overflow-y-auto w-full justify-evenly">
       <div className="flex justify-between items-center mb-2 px-4">
         <h2 className="text-lg font-bold">Recently Played</h2>
-        <div className="flex items-center">
+        <div className="flex ">
           <FunnelIcon
             className="w-6 mr-4 cursor-pointer"
             onClick={() => alert("Filtering functionality to be implemented!")}
