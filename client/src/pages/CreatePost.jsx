@@ -161,16 +161,18 @@ export default function CreatePost() {
               </div>
             </div>
           </div>
-          <div className="p-4 w-full rounded-lg bg-[#0a2540] flex flex-row justify-center items-center">
+          <div className="p-4 w-full rounded-lg bg-[#0a2540] flex flex-row justify-center items-center shadow-lg">
             <SocialMediaLinks />
           </div>
-          <button
-            type="submit"
-            className="text-white bg-blue-600 hover:bg-blue-700 p-2 rounded"
-            onClick={() => alert("Queue functionality to be implemented!")}
-          >
-            Add to Queue
-          </button>
+          <div className="flex justify-center mt-4">
+            <button
+              type="submit"
+              className="text-white bg-blue-600 hover:bg-blue-700 p-3 rounded w-2/4"
+              onClick={() => alert("Queue functionality to be implemented!")}
+            >
+              Add to Queue
+            </button>
+          </div>
         </form>
       </div>
     </div>
