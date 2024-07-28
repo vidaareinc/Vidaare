@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { CalendarDaysIcon } from "@heroicons/react/24/solid";
-import Calendar from "react-calendar";
+import { Calendar } from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { ArrowUpTrayIcon } from "@heroicons/react/24/solid";
 import SocialMediaLinks from "../components/quicklinks/SocialMediaLinks";
