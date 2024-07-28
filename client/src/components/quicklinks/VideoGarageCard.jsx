@@ -8,7 +8,7 @@ export default function VideoGarageCard({
   onClick,
 }) {
   return (
-    <div className="max-w-sm rounded-xl overflow-hidden shadow-lg p-4">
+    <div className="max-w-sm rounded-xl overflow-hidden shadow-lg">
       <div className="h-auto overflow-hidden">
         <img
           className="w-42 h-auto object-cover rounded-xl mt-4"
@@ -16,15 +16,19 @@ export default function VideoGarageCard({
           alt={title}
         />
       </div>
-      <h1 className="font-bold text-xl mb-2 text-white mt-2">{title}</h1>
-      <p className="text-gray-700 text-base">{description}</p>
-      <div className="mt-4 ">
-        <button
-          className="text-white border text-base rounded-lg border-slate-500 hover:text-slate-500 p-2"
-          onClick={onClick}
-        >
-          View All
-        </button>
+      <div className="p-2">
+        <h1 className="font-bold text-xl mb-2 text-white mt-2">{title}</h1>
+        <p className="text-gray-700 text-base">{description}</p>
+        <div className="mt-4">
+          <button
+            className="text-white border text-base rounded-lg border-slate-500 hover:text-slate-500 p-2"
+            onClick={() =>
+              alert("Another Screen functionality to be implemented!")
+            }
+          >
+            View All
+          </button>
+        </div>
       </div>
     </div>
   );
