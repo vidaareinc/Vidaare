@@ -20,7 +20,7 @@ export default function QuickLinks() {
             alt="Avatar"
           />
           <PencilIcon
-            className="absolute bottom-0 right-8 w-7 h-7 rounded-lg bg-black text-white p-2 cursor-pointer"
+            className="absolute bottom-0 right-0 w-7 h-7 rounded-lg bg-black text-white p-2 cursor-pointer"
             onClick={() =>
               alert("Image change functionality to be implemented!")
             }

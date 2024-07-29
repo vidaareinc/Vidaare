@@ -6,6 +6,19 @@ import "video-react/dist/video-react.css";
 export default function MyVideos() {
   const [currentVideo, setCurrentVideo] = useState("");
   const [recentlyPlayed, setRecentlyPlayed] = useState([]);
+  const [filter, setFilter] = useState("all");
+
+  const filters = [
+    "all",
+    "educational videos",
+    "entertaining videos",
+    "promotional videos",
+    "live streams",
+    "event/coverage videos",
+    "how-to/guide videos",
+    "personal/vlog videos",
+    "others",
+  ];
 
   useEffect(() => {
     const storedRecentlyPlayed = localStorage.getItem("recentlyPlayed");
@@ -32,7 +45,20 @@ export default function MyVideos() {
 
   return (
     <>
-      <div className="m-4">
+      <div className="flex flex-row justify-evenly w-full">
+        {filters.map((filterItem) => (
+          <h1
+            key={filterItem}
+            className={`text-sm cursor-pointer uppercase mr-4 text-white ${
+              filter === filterItem ? "font-bold" : ""
+            }`}
+            onClick={() => setFilter(filterItem)}
+          >
+            {filterItem}
+          </h1>
+        ))}
+      </div>
+      <div className="m-6">
         <div className="container flex flex-row">
           <div className="flex p-2 w-7/12 justify-center">
             {currentVideo ? (
