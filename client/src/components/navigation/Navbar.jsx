@@ -72,7 +72,8 @@ export default function Navbar() {
         <div className="absolute bottom-0 w-[80%]">
           <hr className="mb-8" />
           <Link
-            to="/logout"
+            onClick={() => alert("Logout functionality to be implemented!")}
+            to=""
             className="flex items-center justify-start p-4 mx-4 mb-2 text-gray-300 text-base hover:text-white"
           >
             <ArrowRightEndOnRectangleIcon className="w-6 mr-8" />

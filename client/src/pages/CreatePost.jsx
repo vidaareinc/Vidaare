@@ -1,9 +1,9 @@
 import React, { useState, useRef } from "react";
-import { CalendarDaysIcon } from "@heroicons/react/24/solid";
+import { CalendarDaysIcon, ArrowUpTrayIcon } from "@heroicons/react/24/solid";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import { ArrowUpTrayIcon } from "@heroicons/react/24/solid";
 import SocialMediaLinks from "../components/quicklinks/SocialMediaLinks";
+import Ex1 from "../assets/videos/Ex1.mp4";
 
 export default function CreatePost() {
   const [media, setMedia] = useState("");
@@ -47,19 +47,19 @@ export default function CreatePost() {
   };
 
   return (
-    <div className="container p-2 rounded-lg">
-      <div className="w-[50%] p-2">
+    <div className="container p-4 rounded-lg grid grid-cols-2">
+      <div className="w-full p-2">
         <div className="flex flex-row gap-2 items-center mb-4">
           <CalendarDaysIcon className="w-10 text-white" />
           <h1 className="text-white text-3xl">Schedule</h1>
         </div>
-        <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-4">
+        <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-y-4">
           <div className="flex flex-col">
             <label htmlFor="media" className="text-white">
               Select Media
             </label>
             <button
-              className="text-white bg-gray-800 border border-gray-600 rounded-lg p-2 mt-2 flex justify-between"
+              className="text-white bg-[#0a2540] shadow-lg rounded-lg p-2 mt-2 flex justify-between"
               onClick={handleClick}
             >
               Upload File
@@ -81,7 +81,7 @@ export default function CreatePost() {
               id="title"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              className="text-white bg-gray-800 border border-gray-600 rounded-lg p-2 mt-2 "
+              className="text-white bg-[#0a2540] shadow-lg rounded-lg p-2 mt-2"
             />
           </div>
           <div className="flex flex-col">
@@ -92,7 +92,7 @@ export default function CreatePost() {
               id="description"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              className="text-white bg-gray-800 border border-gray-600 rounded-lg p-2 mt-2"
+              className="text-white bg-[#0a2540] shadow-lg rounded-lg p-2 mt-2"
             />
           </div>
           <div className="flex flex-col">
@@ -104,13 +104,13 @@ export default function CreatePost() {
               id="date"
               value={date.toDateString()}
               readOnly
-              className="text-white bg-gray-800 border border-gray-600 rounded-lg p-2 mt-2"
+              className="text-white bg-[#0a2540] shadow-lg rounded-lg p-2 mt-2"
             />
             <div className="mt-2">
               <Calendar
                 onChange={handleDateChange}
                 value={date}
-                className="bg-transparent text-white rounded-lg w-full mt-2 p-2"
+                className="bg-[#0a2540] text-white rounded-lg w-full mt-2 p-2 shadow-lg"
               />
             </div>
           </div>
@@ -139,7 +139,7 @@ export default function CreatePost() {
                 <button
                   type="button"
                   onClick={() => handleTimeChange("period", "AM")}
-                  className={`text-white bg-[#0a2540] rounded-lg p-2 w-18 text-center text-xl ${
+                  className={`text-white bg-[#0a2540] rounded-xl p-2 w-18 text-center text-xl ${
                     time.period === "AM"
                       ? "bg-blue-600"
                       : "hover:bg-white hover:text-[#0a2540]"
@@ -150,7 +150,7 @@ export default function CreatePost() {
                 <button
                   type="button"
                   onClick={() => handleTimeChange("period", "PM")}
-                  className={`text-white bg-[#0a2540] rounded-lg p-2 w-18 text-center text-xl ${
+                  className={`text-white bg-[#0a2540] rounded-xl p-2 w-18 text-center text-xl ${
                     time.period === "PM"
                       ? "bg-blue-600"
                       : "hover:bg-white hover:text-[#0a2540]"
@@ -161,19 +161,56 @@ export default function CreatePost() {
               </div>
             </div>
           </div>
-          <div className="p-4 w-full rounded-lg bg-[#0a2540] flex flex-row justify-center items-center shadow-lg">
+          <div className="p-4 w-full rounded-lg bg-[#0a2540] flex flex-row justify-center items-center shadow-xl">
             <SocialMediaLinks />
           </div>
           <div className="flex justify-center mt-4">
             <button
               type="submit"
-              className="text-white bg-blue-600 hover:bg-blue-700 p-3 rounded w-2/4"
-              onClick={() => alert("Queue functionality to be implemented!")}
+              className="text-white bg-[#0a2540] hover:bg-white hover:text-[#0a2540] p-3 rounded-xl shadow-xl w-2/4"
             >
               Add to Queue
             </button>
           </div>
         </form>
+      </div>
+
+      {/* Displaying entered data */}
+      <div className="w-full h-3/4 flex flex-col">
+        <div className="text-white flex flex-row justify-between bg-[#0a2540] p-4 rounded-lg ">
+          <div className="w-1/3 mr-4">
+            {media ? (
+              <p>{media.name}</p>
+            ) : (
+              <video
+                className="w-full mt-2 rounded-lg"
+                muted
+                width="100%"
+                height="auto"
+                controls={false}
+              >
+                <source src={Ex1} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            )}
+          </div>
+          <div className="w-2/3 flex flex-col">
+            <p className="mb-2 text-xl">{title || "No title provided"}</p>
+            <p className="mb-2">{description || "No description provided"}</p>
+            <p className="mb-2">{date.toDateString()}</p>
+            <p>
+              {time.hours}:{time.minutes} {time.period}
+            </p>
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <button
+            type="button"
+            className="text-white bg-[#0a2540] hover:bg-white hover:text-[#0a2540] p-3 rounded-xl shadow-xl mt-4 w-2/4 "
+          >
+            Create Post
+          </button>
+        </div>
       </div>
     </div>
   );
