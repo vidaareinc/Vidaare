@@ -4,16 +4,24 @@ const cors = require("cors");
 require("dotenv").config();
 const connectDB = require("./config/db.js");
 const port = process.env.PORT || 4000;
-const userRoute = require("./routes/user.route.js")
 
 const app = express();
 
+// Middleware
 app.use(cors());
-app.use(express.json()); // Middleware to parse JSON
-app.use(express.urlencoded({extended: false}))
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+// Routes
+const userRoute = require("./routes/user.route.js");
 app.use("/api/user", userRoute);
+
+const tiktokRoute = require("./routes/tiktok.route.js");
+app.use("/api", tiktokRoute);
 
 // Connect to Database
 connectDB();
 
-app.listen(port, () => console.log(`Server is running on port ${port}`.white.bold));
+app.listen(port, () =>
+  console.log(`Server is running on port ${port}`.white.bold)
+);

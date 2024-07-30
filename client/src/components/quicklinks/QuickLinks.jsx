@@ -2,8 +2,9 @@ import React from "react";
 import Avatar from "../../assets/images/Main/JaneDoe.jpg";
 import "../../styles/styles.css";
 
-import { CheckCircleIcon, PencilIcon } from "@heroicons/react/24/solid";
+import { PencilIcon } from "@heroicons/react/24/solid";
 import SocialMediaLinks from "./SocialMediaLinks";
+// import TikTokLogin from "../services/TikTokLogin";
 
 /**
  * TO Discuss: How the Quick Links works
@@ -35,6 +36,7 @@ export default function QuickLinks() {
       {/* TODO: Implement feature weather social media platform is logged in */}
       <div className="px-4 py-6 mx-6 w-auto rounded-lg bg-[#0a2540] flex flex-row justify-center items-center">
         <SocialMediaLinks />
+        {/* <TikTokLogin /> */}
       </div>
     </div>
   );
