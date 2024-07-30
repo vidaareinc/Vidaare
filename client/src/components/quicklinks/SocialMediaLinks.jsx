@@ -8,6 +8,7 @@ import YTQuicklinks from "../../assets/images/Main/YT_quicklinks.png";
 import TwitchQuicklinks from "../../assets/images/Main/Twitch_quicklinks.png";
 import TiktokQuicklinks from "../../assets/images/Main/TT_quicklinks.png";
 import { Link } from "react-router-dom";
+import TikTokLogin from "../services/TikTokLogin";
 
 const socialMediaLinks = [
   {
@@ -50,7 +51,7 @@ const socialMediaLinks = [
 export default function SocialMediaLinks() {
   return (
     <>
-      {socialMediaLinks.map((link) => (
+      {/* {socialMediaLinks.map((link) => (
         <Link
           key={link.name}
           to={link.url}
@@ -59,7 +60,8 @@ export default function SocialMediaLinks() {
         >
           <img src={link.imagePath} alt={link.name} className="w-24 h-auto" />
         </Link>
-      ))}
+      ))} */}
+      <TikTokLogin />
     </>
   );
 }
