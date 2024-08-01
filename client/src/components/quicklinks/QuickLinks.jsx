@@ -2,7 +2,7 @@ import React from "react";
 import Avatar from "../../assets/images/Main/JaneDoe.jpg";
 import "../../styles/styles.css";
 
-import { PencilIcon } from "@heroicons/react/24/solid";
+// import { PencilIcon } from "@heroicons/react/24/solid";
 import SocialMediaLinks from "./SocialMediaLinks";
 // import TikTokLogin from "../services/TikTokLogin";
 
@@ -20,12 +20,12 @@ export default function QuickLinks() {
             src={Avatar}
             alt="Avatar"
           />
-          <PencilIcon
+          {/* <PencilIcon
             className="absolute bottom-0 right-0 w-7 h-7 rounded-lg bg-black text-white p-2 cursor-pointer"
             onClick={() =>
               alert("Image change functionality to be implemented!")
             }
-          />
+          /> */}
         </div>
         {/* TODO: Retrieve Users Name and Email */}
         <div className="flex flex-col">
