@@ -9,7 +9,7 @@ export default function MainHeader() {
   return (
     <>
       {/* Header */}
-      <header className="bg-transparent sticky top-0 z-10 ">
+      <header className="bg-transparent sticky top-0 z-10 backdrop-blur-lg">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center flex-row ">
           <div className="flex flex-col">
             <div className="flex flex-row">
