@@ -7,17 +7,22 @@ import MainHeader from "../header/MainHeader";
 import MainFooter from "../footer/MainFooter";
 import CreatePostButton from "../../share/CreatePostButton";
 
-export default function Layout({ children, showCreatePostButton }) {
+export default function Layout({
+  children,
+  showCreatePostButton,
+  showHeader,
+  showNavbar,
+}) {
   return (
     // FIXME: Modify the background lineaer gradient color
     <div className="flex min-h-screen main-bg layout-bg p-4">
-      <Navbar />
+      {showNavbar && <Navbar />}
 
       {/* Main content Section */}
-      <div className="flex-1">
+      <div className="flex-1 p-4">
         {/* Main content */}
-        <MainHeader />
-        <main className="container mx-auto px-4 py-4">{children}</main>
+        {showHeader && <MainHeader />}
+        <main className="mx-auto px-8 py-4">{children}</main>
         {/* Create Post */}
         {showCreatePostButton && <CreatePostButton />}
         {/* Footer */}
@@ -29,4 +34,11 @@ export default function Layout({ children, showCreatePostButton }) {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  showCreatePostButton: PropTypes.bool,
+  showHeader: PropTypes.bool,
+};
+
+Layout.defaultProps = {
+  showCreatePostButton: false,
+  showHeader: true,
 };
