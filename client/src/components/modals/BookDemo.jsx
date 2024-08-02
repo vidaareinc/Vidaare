@@ -100,7 +100,7 @@ export default function BookDemo({ isOpen, onClose }) {
               className="bg-transparent text-white px-12 py-2 rounded border border-white hover:text-gray-500"
               disabled={loading}
             >
-              {loading ? "Submitting..." : "Subscribe"}
+              {loading ? "Submitting..." : "Book Now"}
             </button>
           </div>
         </form>

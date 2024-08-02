@@ -6,7 +6,7 @@ import {
   CalendarIcon,
   UserIcon,
   ChartBarIcon,
-  ArrowRightEndOnRectangleIcon,
+  ArrowRightOnRectangleIcon,
 } from "@heroicons/react/24/solid";
 import "../../styles/styles.css";
 
@@ -22,7 +22,7 @@ export default function Navbar() {
         <hr className="mb-8" />
         <Link
           to="/dashboard"
-          className="flex items-center justify-start p-4 m-4  text-gray-300 text-base hover:text-white"
+          className="flex items-center justify-start p-4 m-4 text-gray-300 text-base hover:text-white pointer-events-none"
         >
           <HomeIcon className="w-6 mr-8" />
           Dashboard
@@ -31,17 +31,16 @@ export default function Navbar() {
         {/* My Videos Link */}
         <Link
           to="/myvideos"
-          className="flex items-center justify-self p-4 mx-4 mb-2 text-gray-300 text-base hover:text-white"
+          className="flex items-center justify-self p-4 mx-4 mb-2 text-gray-300 text-base hover:text-white pointer-events-none"
         >
           <VideoCameraIcon className="w-6 mr-8" />
           My Videos
         </Link>
 
         {/* Analytics Link */}
-
         <Link
           to="/analytics"
-          className="flex items-center justify-start p-4 mx-4 mb-2 text-gray-300 text-base hover:text-white"
+          className="flex items-center justify-start p-4 mx-4 mb-2 text-gray-300 text-base hover:text-white pointer-events-none"
         >
           <ChartBarIcon className="w-6 mr-8" />
           Analytics
@@ -62,7 +61,7 @@ export default function Navbar() {
         </h1>
         <Link
           href="#"
-          className="flex items-center justify-start p-4 mx-4 mb-2 text-gray-300 text-base hover:text-white"
+          className="flex items-center justify-start p-4 mx-4 mb-2 text-gray-300 text-base hover:text-white pointer-events-none"
         >
           <UserIcon className="w-6 mr-8" />
           My Profile
@@ -74,9 +73,9 @@ export default function Navbar() {
           <Link
             onClick={() => alert("Logout functionality to be implemented!")}
             to=""
-            className="flex items-center justify-start p-4 mx-4 mb-2 text-gray-300 text-base hover:text-white"
+            className="flex items-center justify-start p-4 mx-4 mb-2 text-gray-300 text-base hover:text-white pointer-events-none"
           >
-            <ArrowRightEndOnRectangleIcon className="w-6 mr-8" />
+            <ArrowRightOnRectangleIcon className="w-6 mr-8" />
             Logout
           </Link>
 

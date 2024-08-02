@@ -37,7 +37,7 @@ export default function Header() {
       <Link
         className="bg-transparent text-white me-8 px-4 py-2 rounded border border-white hidden sm:block hover:text-slate-500"
         // onClick={() => setIsModalOpen(true)}
-        to="/dashboard"
+        to="/demo"
       >
         Let&apos;s Get Started
       </Link>

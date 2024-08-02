@@ -14,7 +14,7 @@ export default function Router() {
   return (
     <Routes>
       <Route path="/" element={<Landing />} />
-      <Route
+      {/* <Route
         path="/dashboard"
         element={
           <Layout showCreatePostButton>
@@ -37,23 +37,23 @@ export default function Router() {
             <Analytics />
           </Layout>
         }
-      />
+      /> */}
       <Route
         path="/demo"
         element={
-          <Layout showCreatePostButton={false}>
+          <Layout showCreatePostButton={false} showHeader={false}>
             <Demo />
           </Layout>
         }
       />
-      <Route
+      {/* <Route
         path="/createpost"
         element={
           <Layout showCreatePostButton={false}>
             <CreatePost />
           </Layout>
         }
-      />
+      /> */}
       <Route
         path="/terms-and-conditions"
         element={
