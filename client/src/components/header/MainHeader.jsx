@@ -4,6 +4,7 @@ import {
   MagnifyingGlassIcon,
 } from "@heroicons/react/24/solid";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function MainHeader() {
   return (
@@ -13,9 +14,12 @@ export default function MainHeader() {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center flex-row ">
           <div className="flex flex-col">
             <div className="flex flex-row">
-              <h1 className="text-lg font-bold uppercase mr-4 text-white">
+              <Link
+                to="/"
+                className="text-lg font-bold uppercase mr-4 text-white"
+              >
                 vidaare
-              </h1>{" "}
+              </Link>{" "}
               <h1 className="text-lg font-bold uppercase mr-4 text-white">/</h1>
               {/* TODO: Add Page Screen Name */}
               <h1 className="text-lg font-bold text-white">

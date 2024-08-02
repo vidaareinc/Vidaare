@@ -13,9 +13,9 @@ export default function Header() {
 
   return (
     <div className="flex flex-row justify-between items-center p-4 md:p-8 relative">
-      <h1 className="text-2xl md:text-3xl text-white logo uppercase">
+      <Link to="/" className="text-2xl md:text-3xl text-white logo uppercase">
         Vidaare
-      </h1>
+      </Link>
       {/* <Link to="/dashboard" className="text-xl text-white">
         Dashboard
       </Link> */}
