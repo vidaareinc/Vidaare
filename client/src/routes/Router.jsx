@@ -17,7 +17,7 @@ export default function Router() {
       <Route
         path="/dashboard"
         element={
-          <Layout showCreatePostButton>
+          <Layout showCreatePostButton showNavbar={true}>
             <Dashboard />
           </Layout>
         }
@@ -25,7 +25,7 @@ export default function Router() {
       <Route
         path="/myvideos"
         element={
-          <Layout showCreatePostButton>
+          <Layout showCreatePostButton showNavbar={true}>
             <MyVideos />
           </Layout>
         }
@@ -33,7 +33,7 @@ export default function Router() {
       <Route
         path="/analytics"
         element={
-          <Layout showCreatePostButton>
+          <Layout showCreatePostButton showNavbar={true}>
             <Analytics />
           </Layout>
         }
@@ -49,7 +49,7 @@ export default function Router() {
       <Route
         path="/createpost"
         element={
-          <Layout showCreatePostButton={false}>
+          <Layout showCreatePostButton={false} showNavbar={true}>
             <CreatePost />
           </Layout>
         }

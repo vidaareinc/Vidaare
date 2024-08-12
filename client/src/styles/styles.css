@@ -52,3 +52,49 @@
   background-repeat: no-repeat;
   background-position: center;
 } */
+
+/* Base screen */
+.layout-bg {
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+}
+
+.main-bg {
+  min-height: 100vh;
+}
+
+/* Tablet size screen */
+@media only screen and (max-width: 1024px) {
+  .layout-bg {
+    flex-direction: column;
+  }
+
+  .main-bg {
+    padding: 2rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}
+
+/* Small szie screen */
+@media only screen and (max-width: 430px) {
+  .layout-bg {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  main {
+    padding: 0.5rem;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .create-post-button {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
