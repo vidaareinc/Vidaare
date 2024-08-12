@@ -15,7 +15,7 @@ export default function Layout({
 }) {
   return (
     // FIXME: Modify the background lineaer gradient color
-    <div className="flex min-h-screen main-bg layout-bg p-4">
+    <div className="flex main-bg layout-bg p-4">
       {showNavbar && <Navbar />}
 
       {/* Main content Section */}
